@@ -1,0 +1,32 @@
+<idea-plugin>
+    <id>de.meinname.scopebox</id>
+    <name>Louis Coding Essentials</name>
+    <version>1.5.0</version>
+    <vendor>Selfmade</vendor>
+    <idea-version since-build="243"/>
+    <description>Personal coding essentials: always-on function highlighting with a boxed current scope, a one-click copy icon per function, plus a per-project Notes tool window with live // code notes extraction and click-to-code navigation.</description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <editorFactoryListener implementation="de.meinname.scopebox.ScopeEditorListener"/>
+        <toolWindow id="Notizen" anchor="right" icon="/icons/notes.svg"
+                    factoryClass="de.meinname.scopebox.NotesToolWindowFactory"/>
+    </extensions>
+
+    <actions>
+        <action id="LouisCodingEssentials.CopyFunction"
+                class="de.meinname.scopebox.CopyFunctionAction"
+                text="Copy Function at Caret"
+                description="Copies the function that contains the caret">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt shift K"/>
+        </action>
+        <action id="LouisCodingEssentials.CopyAllFunctions"
+                class="de.meinname.scopebox.CopyAllFunctionsAction"
+                text="Copy All Functions"
+                description="Copies every function of the current file">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
