@@ -1,15 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="500" height="150" viewBox="0 0 500 150">
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#161b2e"/><stop offset="1" stop-color="#0d1117"/></linearGradient>
-    <linearGradient id="a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4F8CFF"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient>
-  </defs>
-  <rect x="1" y="1" width="498" height="148" rx="14" fill="url(#g)" stroke="#2b3350"/>
-  <rect x="1" y="24" width="4" height="102" rx="2" fill="url(#a)"/>
-  <rect x="28" y="30" width="52" height="52" rx="12" fill="#4F8CFF" fill-opacity="0.14" stroke="#4F8CFF" stroke-opacity="0.45"/>
-  <svg x="40" y="42" width="28" height="28" viewBox="0 0 16 16" fill="#7FB0FF">
-  <path d="M8.5.5a.5.5 0 0 0-1 0v.518A7 7 0 0 0 1.018 7.5H.5a.5.5 0 0 0 0 1h.518A7 7 0 0 0 7.5 14.982v.518a.5.5 0 0 0 1 0v-.518A7 7 0 0 0 14.982 8.5h.518a.5.5 0 0 0 0-1h-.518A7 7 0 0 0 8.5 1.018zm-6.48 7A6 6 0 0 1 7.5 2.02v.48a.5.5 0 0 0 1 0v-.48a6 6 0 0 1 5.48 5.48h-.48a.5.5 0 0 0 0 1h.48a6 6 0 0 1-5.48 5.48v-.48a.5.5 0 0 0-1 0v.48A6 6 0 0 1 2.02 8.5h.48a.5.5 0 0 0 0-1zM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
-</svg>
-  <text x="100" y="52" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#f1f5f9">Click-to-Code</text>
-  <rect x="100" y="62" width="36" height="3" rx="1.5" fill="url(#a)"/>
-  <text font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" fill="#94a3b8"><tspan x="28" y="106">Ein Klick auf eine Notiz &#246;ffnet die Datei</tspan><tspan x="28" y="128">und springt direkt zur richtigen Zeile.</tspan></text>
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="140" viewBox="0 0 500 140">
+  <rect x="0.5" y="0.5" width="499" height="139" fill="#ffffff" stroke="#e5e7eb"/>
+  <circle cx="36" cy="44" r="6" fill="#4F8CFF"/>
+  <text x="52" y="52" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24" letter-spacing="1.5" fill="#333333"><tspan font-weight="500">CLICK</tspan><tspan fill="#4F8CFF" font-weight="400"> TO CODE</tspan></text>
+  <text font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="300" fill="#6b7280"><tspan x="30" y="92">Ein Klick auf eine Notiz &#246;ffnet die Datei</tspan><tspan x="30" y="114">und springt direkt zur richtigen Zeile.</tspan></text>
 </svg>

@@ -1,15 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="500" height="150" viewBox="0 0 500 150">
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#161b2e"/><stop offset="1" stop-color="#0d1117"/></linearGradient>
-    <linearGradient id="a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4F8CFF"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient>
-  </defs>
-  <rect x="1" y="1" width="498" height="148" rx="14" fill="url(#g)" stroke="#2b3350"/>
-  <rect x="1" y="24" width="4" height="102" rx="2" fill="url(#a)"/>
-  <rect x="28" y="30" width="52" height="52" rx="12" fill="#4F8CFF" fill-opacity="0.14" stroke="#4F8CFF" stroke-opacity="0.45"/>
-  <svg x="40" y="42" width="28" height="28" viewBox="0 0 16 16" fill="#7FB0FF">
-  <path d="M13 0H6a2 2 0 0 0-2 2 2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2 2 2 0 0 0 2-2V2a2 2 0 0 0-2-2m0 13V4a2 2 0 0 0-2-2H5a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1M3 4a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/>
-</svg>
-  <text x="100" y="52" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#f1f5f9">Copy All Functions</text>
-  <rect x="100" y="62" width="36" height="3" rx="1.5" fill="url(#a)"/>
-  <text font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" fill="#94a3b8"><tspan x="28" y="106">Alle Funktionen der aktuellen Datei</tspan><tspan x="28" y="128">mit einem Klick im Kontextmen&#252; kopieren.</tspan></text>
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="140" viewBox="0 0 500 140">
+  <rect x="0.5" y="0.5" width="499" height="139" fill="#ffffff" stroke="#e5e7eb"/>
+  <circle cx="36" cy="44" r="6" fill="#4F8CFF"/>
+  <text x="52" y="52" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24" letter-spacing="1.5" fill="#333333"><tspan font-weight="500">COPY ALL</tspan><tspan fill="#4F8CFF" font-weight="400"> FUNCTIONS</tspan></text>
+  <text font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="300" fill="#6b7280"><tspan x="30" y="92">Alle Funktionen der aktuellen Datei</tspan><tspan x="30" y="114">mit einem Klick im Kontextmen&#252; kopieren.</tspan></text>
 </svg>
