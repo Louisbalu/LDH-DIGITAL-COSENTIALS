@@ -1,6 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="500" height="140" viewBox="0 0 500 140">
-  <rect x="0.5" y="0.5" width="499" height="139" fill="#ffffff" stroke="#e5e7eb"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="242" viewBox="0 0 500 242">
+  <rect x="0.5" y="0.5" width="499" height="241" fill="#ffffff" stroke="#e5e7eb"/>
   <circle cx="36" cy="44" r="6" fill="#4F8CFF"/>
   <text x="52" y="52" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24" letter-spacing="1.5" fill="#333333"><tspan font-weight="500">SCOPE</tspan><tspan fill="#4F8CFF" font-weight="400"> BOX</tspan></text>
-  <text font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="300" fill="#6b7280"><tspan x="30" y="92">Hebt den aktuellen Funktions- und Block-Scope</tspan><tspan x="30" y="114">dauerhaft mit einem Rahmen hervor.</tspan></text>
+  <text x="472" y="54" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="30" font-weight="200" fill="#d1d5db">04</text>
+  <text font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="300" fill="#6b7280"><tspan x="30" y="86">Hebt den aktuellen Funktions- und Block-Scope</tspan><tspan x="30" y="106">dauerhaft mit einem Rahmen hervor.</tspan></text>
+  <rect x="24" y="122" width="452" height="96" fill="#f5f7fa"/>
+  <g font-family="Consolas, Menlo, 'Courier New', monospace" font-size="13"><text x="40" y="146" xml:space="preserve"><tspan fill="#6b7280">// vorherige Funktion</tspan></text><rect x="32" y="153" width="436" height="58" fill="none" stroke="#4F8CFF" stroke-width="1.5"/><text x="40" y="167" xml:space="preserve"><tspan fill="#4F8CFF">int</tspan><tspan fill="#333333"> add(a, b) {</tspan></text><text x="40" y="188" xml:space="preserve"><tspan fill="#333333">  </tspan><tspan fill="#4F8CFF">return</tspan><tspan fill="#333333"> a + b;</tspan></text><text x="40" y="209" xml:space="preserve"><tspan fill="#333333">}</tspan></text></g>
 </svg>

@@ -1,6 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="500" height="140" viewBox="0 0 500 140">
-  <rect x="0.5" y="0.5" width="499" height="139" fill="#ffffff" stroke="#e5e7eb"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="242" viewBox="0 0 500 242">
+  <rect x="0.5" y="0.5" width="499" height="241" fill="#ffffff" stroke="#e5e7eb"/>
   <circle cx="36" cy="44" r="6" fill="#4F8CFF"/>
   <text x="52" y="52" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24" letter-spacing="1.5" fill="#333333"><tspan font-weight="500">CLICK</tspan><tspan fill="#4F8CFF" font-weight="400"> TO CODE</tspan></text>
-  <text font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="300" fill="#6b7280"><tspan x="30" y="92">Ein Klick auf eine Notiz &#246;ffnet die Datei</tspan><tspan x="30" y="114">und springt direkt zur richtigen Zeile.</tspan></text>
+  <text x="472" y="54" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="30" font-weight="200" fill="#d1d5db">02</text>
+  <text font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="300" fill="#6b7280"><tspan x="30" y="86">Ein Klick auf eine Notiz &#246;ffnet die Datei</tspan><tspan x="30" y="106">und springt direkt zur richtigen Zeile.</tspan></text>
+  <rect x="24" y="122" width="452" height="96" fill="#f5f7fa"/>
+  <g font-family="Consolas, Menlo, 'Courier New', monospace" font-size="13"><rect x="24" y="130" width="452" height="24" fill="#4F8CFF" fill-opacity="0.12"/><rect x="24" y="130" width="3" height="24" fill="#4F8CFF"/><text x="40" y="147" xml:space="preserve"><tspan fill="#4F8CFF">main.c:42</tspan><tspan fill="#6b7280">   TODO  </tspan><tspan fill="#333333">Overflow pruefen</tspan><tspan fill="#4F8CFF">   &#8594;</tspan></text><text x="40" y="172" xml:space="preserve"><tspan fill="#6b7280">util.c:17</tspan><tspan fill="#6b7280">   FIXME </tspan><tspan fill="#333333">Speicher freigeben</tspan></text><text x="40" y="197" xml:space="preserve"><tspan fill="#6b7280">io.c:9   </tspan><tspan fill="#6b7280">   NOTIZ </tspan><tspan fill="#333333">Puffer testen</tspan></text></g>
 </svg>
