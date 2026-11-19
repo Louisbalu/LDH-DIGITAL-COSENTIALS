@@ -11,37 +11,22 @@
 
 ## Features
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h3><img src="assets/icons/search.svg" width="22" align="center" alt=""/>&nbsp; Code-Notizen-Scanner</h3>
-      Findet automatisch Notizen in deinem Code: <code>//</code>, <code>/* … */</code>, <code>TODO</code>, <code>FIXME</code>, <code>NOTIZ</code> und mehr. Live und projektweit.
-    </td>
-    <td width="50%" valign="top">
-      <h3><img src="assets/icons/crosshair.svg" width="22" align="center" alt=""/>&nbsp; Click-to-Code</h3>
-      Ein Klick auf eine Notiz im Tool-Window öffnet die Datei und springt direkt zur passenden Zeile.
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3><img src="assets/icons/journal-text.svg" width="22" align="center" alt=""/>&nbsp; Projektweiter Notizblock</h3>
-      Persistenter Notizblock pro Projekt. Alle gefundenen Code-Kommentare lassen sich mit einem Klick importieren.
-    </td>
-    <td width="50%" valign="top">
-      <h3><img src="assets/icons/bounding-box.svg" width="22" align="center" alt=""/>&nbsp; Scope-Box</h3>
-      Der aktuelle Funktions- und Block-Scope wird dauerhaft hervorgehoben und mit einem Rahmen markiert. Du siehst immer, wo du bist.
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3><img src="assets/icons/clipboard.svg" width="22" align="center" alt=""/>&nbsp; Copy Function</h3>
-      Kopiert die Funktion unter dem Cursor über das Gutter-Icon, das Kontextmenü oder <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>K</kbd>.
-    </td>
-    <td width="50%" valign="top">
-      <h3><img src="assets/icons/files.svg" width="22" align="center" alt=""/>&nbsp; Copy All Functions</h3>
-      Kopiert mit einem Klick im Kontextmenü alle Funktionen der aktuellen Datei.
-    </td>
-  </tr>
-</table>
+<img src="assets/icons/search.svg" width="20" align="top" alt=""/>&nbsp; **Code-Notizen-Scanner**  
+<sub>Findet `//`, `/* … */`, `TODO`, `FIXME` und `NOTIZ` automatisch, live und projektweit.</sub>
+
+<img src="assets/icons/crosshair.svg" width="20" align="top" alt=""/>&nbsp; **Click-to-Code**  
+<sub>Ein Klick auf eine Notiz öffnet die Datei und springt direkt zur Zeile.</sub>
+
+<img src="assets/icons/journal-text.svg" width="20" align="top" alt=""/>&nbsp; **Projektweiter Notizblock**  
+<sub>Persistent pro Projekt. Code-Kommentare lassen sich mit einem Klick importieren.</sub>
+
+<img src="assets/icons/bounding-box.svg" width="20" align="top" alt=""/>&nbsp; **Scope-Box**  
+<sub>Hebt den aktuellen Funktions- und Block-Scope dauerhaft mit einem Rahmen hervor.</sub>
+
+<img src="assets/icons/clipboard.svg" width="20" align="top" alt=""/>&nbsp; **Copy Function**  
+<sub>Kopiert die Funktion unter dem Cursor per Gutter-Icon, Kontextmenü oder `Ctrl+Alt+Shift+K`.</sub>
+
+<img src="assets/icons/files.svg" width="20" align="top" alt=""/>&nbsp; **Copy All Functions**  
+<sub>Kopiert alle Funktionen der aktuellen Datei per Kontextmenü.</sub>
 
 ---
