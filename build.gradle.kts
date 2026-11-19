@@ -24,13 +24,21 @@ dependencies {
 
 kotlin {
     jvmToolchain(21)
+    compilerOptions {
+        freeCompilerArgs.add("-Xskip-metadata-version-check")
+    }
 }
 
 intellijPlatform {
+    buildSearchableOptions = false
     pluginConfiguration {
         ideaVersion {
             sinceBuild = "262"
             untilBuild = provider { null }
         }
     }
+}
+
+tasks.named("buildSearchableOptions") {
+    enabled = false
 }

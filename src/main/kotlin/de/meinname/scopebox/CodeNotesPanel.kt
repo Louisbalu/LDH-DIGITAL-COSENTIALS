@@ -13,7 +13,6 @@ import com.intellij.openapi.fileEditor.FileEditorManagerEvent
 import com.intellij.openapi.fileEditor.FileEditorManagerListener
 import com.intellij.openapi.fileEditor.OpenFileDescriptor
 import com.intellij.openapi.project.Project
-import com.intellij.openapi.project.ProjectUtil
 import com.intellij.openapi.roots.ProjectFileIndex
 import com.intellij.openapi.util.Disposer
 import com.intellij.openapi.vfs.LocalFileSystem
@@ -231,7 +230,7 @@ class CodeNotesPanel(
         })
 
         // Listen for editor tab switching or file opening
-        project.messageBus.connect(this).subscribe(
+        subscribeTopic(
             FileEditorManagerListener.FILE_EDITOR_MANAGER,
             object : FileEditorManagerListener {
                 override fun selectionChanged(event: FileEditorManagerEvent) {
@@ -256,7 +255,7 @@ class CodeNotesPanel(
         }, this)
 
         // Listen for files created / modified / deleted on disk
-        project.messageBus.connect(this).subscribe(
+        subscribeTopic(
             VirtualFileManager.VFS_CHANGES,
             object : BulkFileListener {
                 override fun after(events: List<VFileEvent>) {
@@ -270,6 +269,22 @@ class CodeNotesPanel(
                 }
             }
         )
+    }
+
+    private fun <T> subscribeTopic(topic: com.intellij.util.messages.Topic<T>, handler: T) {
+        try {
+            val getMessageBus = project.javaClass.getMethod("getMessageBus")
+            val bus = getMessageBus.invoke(project) ?: return
+            val connect = bus.javaClass.getMethod("connect", Disposable::class.java)
+            val connection = connect.invoke(bus, this) ?: return
+            val subscribe = connection.javaClass.getMethod(
+                "subscribe",
+                com.intellij.util.messages.Topic::class.java,
+                Any::class.java
+            )
+            subscribe.invoke(connection, topic, handler)
+        } catch (_: Throwable) {
+        }
     }
 
     fun scheduleRefresh() {
@@ -366,8 +381,7 @@ class CodeNotesPanel(
         } catch (_: Throwable) {}
 
         // 3. Fallback / supplementary directory traversal (handles unindexed CMake/folders)
-        val baseDir = ProjectUtil.guessProjectDir(project)
-            ?: project.basePath?.let { LocalFileSystem.getInstance().findFileByPath(it) }
+        val baseDir = project.basePath?.let { LocalFileSystem.getInstance().findFileByPath(it) }
 
         if (baseDir != null && baseDir.isValid) {
             VfsUtilCore.visitChildrenRecursively(baseDir, object : VirtualFileVisitor<Void>(limit(8)) {
