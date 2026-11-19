@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="150" viewBox="0 0 500 150">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#161b2e"/><stop offset="1" stop-color="#0d1117"/></linearGradient>
+    <linearGradient id="a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4F8CFF"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient>
+  </defs>
+  <rect x="1" y="1" width="498" height="148" rx="14" fill="url(#g)" stroke="#2b3350"/>
+  <rect x="1" y="24" width="4" height="102" rx="2" fill="url(#a)"/>
+  <rect x="28" y="30" width="52" height="52" rx="12" fill="#4F8CFF" fill-opacity="0.14" stroke="#4F8CFF" stroke-opacity="0.45"/>
+  <svg x="40" y="42" width="28" height="28" viewBox="0 0 16 16" fill="#7FB0FF">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+</svg>
+  <text x="100" y="52" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#f1f5f9">Code-Notizen-Scanner</text>
+  <rect x="100" y="62" width="36" height="3" rx="1.5" fill="url(#a)"/>
+  <text font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" fill="#94a3b8"><tspan x="28" y="106">Findet //, /* ... */, TODO, FIXME und NOTIZ</tspan><tspan x="28" y="128">automatisch: live und projektweit.</tspan></text>
+</svg>

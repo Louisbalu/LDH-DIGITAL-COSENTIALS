@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="150" viewBox="0 0 500 150">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#161b2e"/><stop offset="1" stop-color="#0d1117"/></linearGradient>
+    <linearGradient id="a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4F8CFF"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient>
+  </defs>
+  <rect x="1" y="1" width="498" height="148" rx="14" fill="url(#g)" stroke="#2b3350"/>
+  <rect x="1" y="24" width="4" height="102" rx="2" fill="url(#a)"/>
+  <rect x="28" y="30" width="52" height="52" rx="12" fill="#4F8CFF" fill-opacity="0.14" stroke="#4F8CFF" stroke-opacity="0.45"/>
+  <svg x="40" y="42" width="28" height="28" viewBox="0 0 16 16" fill="#7FB0FF">
+  <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+  <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+</svg>
+  <text x="100" y="52" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#f1f5f9">Copy Function</text>
+  <rect x="100" y="62" width="36" height="3" rx="1.5" fill="url(#a)"/>
+  <text font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" fill="#94a3b8"><tspan x="28" y="106">Funktion unter dem Cursor kopieren: Gutter-Icon,</tspan><tspan x="28" y="128">Kontextmen&#252; oder Ctrl+Alt+Shift+K.</tspan></text>
+</svg>

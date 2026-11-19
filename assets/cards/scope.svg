@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="150" viewBox="0 0 500 150">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#161b2e"/><stop offset="1" stop-color="#0d1117"/></linearGradient>
+    <linearGradient id="a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4F8CFF"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient>
+  </defs>
+  <rect x="1" y="1" width="498" height="148" rx="14" fill="url(#g)" stroke="#2b3350"/>
+  <rect x="1" y="24" width="4" height="102" rx="2" fill="url(#a)"/>
+  <rect x="28" y="30" width="52" height="52" rx="12" fill="#4F8CFF" fill-opacity="0.14" stroke="#4F8CFF" stroke-opacity="0.45"/>
+  <svg x="40" y="42" width="28" height="28" viewBox="0 0 16 16" fill="#7FB0FF">
+  <path d="M5 2V0H0v5h2v6H0v5h5v-2h6v2h5v-5h-2V5h2V0h-5v2zm6 1v2h2v6h-2v2H5v-2H3V5h2V3zm1-2h3v3h-3zm3 11v3h-3v-3zM4 15H1v-3h3zM1 4V1h3v3z"/>
+</svg>
+  <text x="100" y="52" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#f1f5f9">Scope-Box</text>
+  <rect x="100" y="62" width="36" height="3" rx="1.5" fill="url(#a)"/>
+  <text font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" fill="#94a3b8"><tspan x="28" y="106">Hebt den aktuellen Funktions- und Block-Scope</tspan><tspan x="28" y="128">dauerhaft mit einem Rahmen hervor.</tspan></text>
+</svg>
