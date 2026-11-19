@@ -142,8 +142,8 @@ class ScopeEditorListener : EditorFactoryListener {
     companion object {
         private val LOG = Logger.getInstance(ScopeEditorListener::class.java)
         private val STATE_KEY = Key.create<EditorState>("scopebox.state")
-        private const val MAX_CHARS = 1_500_000
-        private val PALETTE = listOf(
+        const val MAX_CHARS = 1_500_000
+        val PALETTE = listOf(
             Triple(100, 150, 255), // blue
             Triple(80, 200, 120),  // green
             Triple(255, 170, 70),  // orange
