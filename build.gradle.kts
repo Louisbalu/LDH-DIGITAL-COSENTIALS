@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "de.meinname"
-version = "1.5.0"
+version = "1.6.0"
 
 repositories {
     mavenCentral()
@@ -20,6 +20,11 @@ dependencies {
         create(IntelliJPlatformType.CLion, "2026.2")
         bundledPlugin("com.intellij.clion")
     }
+    testImplementation(kotlin("test"))
+}
+
+tasks.test {
+    useJUnitPlatform()
 }
 
 kotlin {

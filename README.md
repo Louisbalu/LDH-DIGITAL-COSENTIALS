@@ -19,6 +19,8 @@
 
 <img src="assets/cards/copy.svg" width="49%" alt=""/> <img src="assets/cards/copyall.svg" width="49%" alt=""/>
 
+<img src="assets/cards/memory.svg" width="49%" alt=""/>
+
 </div>
 
 ---

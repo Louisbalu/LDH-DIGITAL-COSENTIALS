@@ -41,7 +41,10 @@ class NotesToolWindowFactory : ToolWindowFactory, DumbAware {
             }
         }
 
+        val memoryCheckPanel = MemoryCheckPanel(project, toolWindow.disposable)
+
         tabbedPane.addTab("Code-Notizen (//)", codeNotesPanel)
+        tabbedPane.addTab("Memory", memoryCheckPanel)
         tabbedPane.addTab("Notizblock", projectNotesPanel)
 
         val content = ContentFactory.getInstance().createContent(tabbedPane, "", false)

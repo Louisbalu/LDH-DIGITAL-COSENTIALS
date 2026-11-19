@@ -1,10 +1,10 @@
 <idea-plugin>
     <id>de.meinname.scopebox</id>
     <name>LDH Digital Cosentials</name>
-    <version>1.5.0</version>
+    <version>1.6.0</version>
     <vendor>Selfmade</vendor>
     <idea-version since-build="243"/>
-    <description>Personal coding essentials: always-on function highlighting with a boxed current scope, a one-click copy icon per function, plus a per-project Notes tool window with live // code notes extraction and click-to-code navigation.</description>
+    <description>Personal coding essentials: always-on function highlighting with a boxed current scope, a one-click copy icon per function, per-project Notes tool window with live // code notes extraction and click-to-code navigation, plus C/C++ memory leak and use-after-free check.</description>
 
     <depends>com.intellij.modules.platform</depends>
 
@@ -12,6 +12,10 @@
         <editorFactoryListener implementation="de.meinname.scopebox.ScopeEditorListener"/>
         <toolWindow id="Notizen" anchor="right" icon="/icons/notes.svg"
                     factoryClass="de.meinname.scopebox.NotesToolWindowFactory"/>
+        <applicationConfigurable parentId="tools"
+                                 id="de.meinname.scopebox.settings"
+                                 displayName="LDH Digital Cosentials"
+                                 instance="de.meinname.scopebox.LdhConfigurable"/>
     </extensions>
 
     <actions>

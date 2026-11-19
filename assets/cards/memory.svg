@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="242" viewBox="0 0 500 242">
+  <rect x="0.5" y="0.5" width="499" height="241" fill="#ffffff" stroke="#e5e7eb"/>
+  <circle cx="36" cy="44" r="6" fill="#4F8CFF"/>
+  <text x="52" y="52" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24" letter-spacing="1.5" fill="#333333"><tspan font-weight="500">MEMORY-CHECK</tspan><tspan fill="#4F8CFF" font-weight="400"> C/C++</tspan></text>
+  <text x="472" y="54" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="30" font-weight="200" fill="#d1d5db">07</text>
+  <text font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="300" fill="#6b7280"><tspan x="30" y="86">Erkennt Leaks, Double-Free und Use-After-Free</tspan><tspan x="30" y="106">in C/C++ live im Editor und im Memory-Tab.</tspan></text>
+  <rect x="24" y="122" width="452" height="96" fill="#f5f7fa"/>
+  <g font-family="Consolas, Menlo, 'Courier New', monospace" font-size="13"><text x="40" y="146" xml:space="preserve"><tspan fill="#4F8CFF">void</tspan><tspan fill="#333333"> process() {</tspan></text><rect x="24" y="153" width="452" height="21" fill="#f59e0b" fill-opacity="0.12"/><rect x="24" y="153" width="3" height="21" fill="#f59e0b"/><text x="40" y="167" xml:space="preserve"><tspan fill="#333333">  char *buf = </tspan><tspan fill="#4F8CFF">malloc</tspan><tspan fill="#333333">(64); </tspan><tspan fill="#d97706">// [LEAK]</tspan></text><text x="40" y="188" xml:space="preserve"><tspan fill="#4F8CFF">  if</tspan><tspan fill="#333333"> (err) </tspan><tspan fill="#ef4444">return;</tspan><tspan fill="#9ca3af"> // early return without free</tspan></text><text x="40" y="209" xml:space="preserve"><tspan fill="#333333">  free(buf); }</tspan></text></g>
+</svg>
