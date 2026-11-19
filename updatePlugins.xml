@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugins>
-    <plugin id="de.meinname.scopebox" url="https://github.com/Louisbalu/LDH-DIGITAL_COSENTIALS/releases/download/v1.5.0/louis-coding-essentials-1.5.0.zip" version="1.5.0">
+    <plugin id="de.meinname.scopebox" url="https://github.com/Louisbalu/LDH-DIGITAL-COSENTIALS/releases/download/v1.5.0/louis-coding-essentials-1.5.0.zip" version="1.5.0">
         <name>Louis Coding Essentials</name>
         <description><![CDATA[Personal coding essentials: always-on function highlighting with a boxed current scope, a one-click copy icon per function, plus a per-project Notes tool window with live // code notes extraction and click-to-code navigation.]]></description>
         <change-notes><![CDATA[
