@@ -1,6 +1,6 @@
 <idea-plugin>
     <id>de.meinname.scopebox</id>
-    <name>Louis Coding Essentials</name>
+    <name>LDH Digital Cosentials</name>
     <version>1.5.0</version>
     <vendor>Selfmade</vendor>
     <idea-version since-build="243"/>
