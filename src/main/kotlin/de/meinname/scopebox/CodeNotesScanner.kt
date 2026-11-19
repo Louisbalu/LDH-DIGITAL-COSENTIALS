@@ -2,6 +2,7 @@ package de.meinname.scopebox
 
 import com.intellij.openapi.editor.Document
 import com.intellij.openapi.vfs.VirtualFile
+import java.awt.Color
 
 object CodeNotesScanner {
 
@@ -10,12 +11,28 @@ object CodeNotesScanner {
         RegexOption.IGNORE_CASE
     )
 
+    private data class FunctionMeta(
+        val range: FunctionRange,
+        val name: String,
+        val color: Color
+    )
+
     /**
      * Scans the given text for single-line `//` comments in C/C++ source code.
-     * Accurately avoids `//` appearing inside strings `"..."`, chars `'...'`, or block comments.
+     * Identifies if a note is inside a colored function body, attaching its name and color.
      */
     fun scan(file: VirtualFile, text: CharSequence): List<CodeNote> {
         val result = ArrayList<CodeNote>()
+
+        // Find functions and assign palette colors (same logic and palette as ScopeEditorListener)
+        val sanitized = if (text.length <= 1_500_000) ScopeScanner.sanitize(text) else CharArray(0)
+        val functions = if (sanitized.isNotEmpty()) ScopeScanner.findFunctions(sanitized) else emptyList()
+        val fnMetas = functions.mapIndexed { idx, f ->
+            val name = extractFunctionName(text, f)
+            val (r, g, b) = ScopeEditorListener.PALETTE[idx % ScopeEditorListener.PALETTE.size]
+            FunctionMeta(f, name, Color(r, g, b))
+        }
+
         var inBlockComment = false
         var lineIndex = 0
         var lineStart = 0
@@ -77,6 +94,8 @@ object CodeNotesScanner {
                         val commentContent = lineText.substring(i + 2, closeIdx).trim()
                         if (isValidNoteText(commentContent)) {
                             val (prefix, cleanText) = extractPrefixAndText(commentContent)
+                            val noteOffset = lineStart + i
+                            val enclosing = fnMetas.firstOrNull { noteOffset >= it.range.start && noteOffset <= it.range.close }
                             result.add(
                                 CodeNote(
                                     file = file,
@@ -84,7 +103,9 @@ object CodeNotesScanner {
                                     column = i,
                                     text = cleanText,
                                     fullLine = lineText,
-                                    prefix = prefix
+                                    prefix = prefix,
+                                    functionName = enclosing?.name ?: "",
+                                    functionColor = enclosing?.color
                                 )
                             )
                         }
@@ -102,6 +123,8 @@ object CodeNotesScanner {
                     val rawComment = lineText.substring(i + 2).trim()
                     if (isValidNoteText(rawComment)) {
                         val (prefix, cleanText) = extractPrefixAndText(rawComment)
+                        val noteOffset = lineStart + i
+                        val enclosing = fnMetas.firstOrNull { noteOffset >= it.range.start && noteOffset <= it.range.close }
                         result.add(
                             CodeNote(
                                 file = file,
@@ -109,7 +132,9 @@ object CodeNotesScanner {
                                 column = i,
                                 text = cleanText,
                                 fullLine = lineText,
-                                prefix = prefix
+                                prefix = prefix,
+                                functionName = enclosing?.name ?: "",
+                                functionColor = enclosing?.color
                             )
                         )
                     }
@@ -161,6 +186,30 @@ object CodeNotesScanner {
 
     fun scan(file: VirtualFile, document: Document): List<CodeNote> {
         return scan(file, document.charsSequence)
+    }
+
+    fun extractFunctionName(source: CharSequence, range: FunctionRange): String {
+        if (range.start < 0 || range.open <= range.start || range.open > source.length) return ""
+        val head = source.subSequence(range.start, range.open).toString().trim()
+        val parenIdx = head.indexOf('(')
+        if (parenIdx > 0) {
+            var end = parenIdx
+            while (end > 0 && head[end - 1].isWhitespace()) end--
+            var start = end
+            while (start > 0) {
+                val ch = head[start - 1]
+                if (ch.isLetterOrDigit() || ch == '_' || ch == ':') {
+                    start--
+                } else {
+                    break
+                }
+            }
+            val name = head.substring(start, end).trim()
+            if (name.isNotEmpty() && name !in setOf("if", "for", "while", "switch", "catch")) {
+                return name
+            }
+        }
+        return ""
     }
 
     fun isValidNoteText(text: String): Boolean {

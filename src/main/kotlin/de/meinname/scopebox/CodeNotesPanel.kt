@@ -145,6 +145,13 @@ class CodeNotesPanel(
 
                 append("Z. ${value.displayLine}  ", SimpleTextAttributes.GRAYED_ATTRIBUTES)
 
+                // Function badge in the exact same color as in the editor
+                if (value.functionName.isNotEmpty()) {
+                    val fnColor = value.functionColor ?: JBColor(Color(100, 150, 255), Color(120, 170, 255))
+                    val fnAttr = SimpleTextAttributes(SimpleTextAttributes.STYLE_BOLD, fnColor)
+                    append("[${value.functionName}()] ", fnAttr)
+                }
+
                 if (value.prefix.isNotEmpty()) {
                     val tagAttrs = when (value.prefix) {
                         "NOTIZ", "NOTE", "NOTIZEN", "NOTES" -> SimpleTextAttributes(
@@ -165,7 +172,8 @@ class CodeNotesPanel(
                 }
 
                 append(value.text, SimpleTextAttributes.REGULAR_ATTRIBUTES)
-                toolTipText = "${value.fileName} (Zeile ${value.displayLine}) - Klick springt direkt dorthin"
+                val fnInfo = if (value.functionName.isNotEmpty()) " in ${value.functionName}()" else ""
+                toolTipText = "${value.fileName} (Zeile ${value.displayLine})$fnInfo - Klick springt direkt dorthin"
             }
         }
 
@@ -417,6 +425,7 @@ class CodeNotesPanel(
                 it.text.lowercase().contains(query) ||
                 it.fileName.lowercase().contains(query) ||
                 it.prefix.lowercase().contains(query) ||
+                it.functionName.lowercase().contains(query) ||
                 "z. ${it.displayLine}".contains(query)
             }
         }
@@ -452,8 +461,9 @@ class CodeNotesPanel(
         val sb = StringBuilder()
         sb.appendLine("\n=== // Code-Notizen (Exportiert am ${java.time.LocalDateTime.now().format(java.time.format.DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm"))}) ===")
         for (note in allNotes) {
+            val fnPart = if (note.functionName.isNotEmpty()) " in ${note.functionName}()" else ""
             val prefixPart = if (note.prefix.isNotEmpty()) "[${note.prefix}] " else ""
-            sb.appendLine("- ${note.fileName}:${note.displayLine} -> $prefixPart${note.text}")
+            sb.appendLine("- ${note.fileName}:${note.displayLine}$fnPart -> $prefixPart${note.text}")
         }
         sb.appendLine()
         onExportToNotepad?.invoke(sb.toString())
@@ -462,8 +472,9 @@ class CodeNotesPanel(
     fun getAllNotesFormatted(): String {
         val sb = StringBuilder()
         for (note in allNotes) {
+            val fnPart = if (note.functionName.isNotEmpty()) " in ${note.functionName}()" else ""
             val prefixPart = if (note.prefix.isNotEmpty()) "[${note.prefix}] " else ""
-            sb.appendLine("- ${note.fileName}:${note.displayLine} -> $prefixPart${note.text}")
+            sb.appendLine("- ${note.fileName}:${note.displayLine}$fnPart -> $prefixPart${note.text}")
         }
         return sb.toString()
     }

@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="assets/banner.png" alt="LDH.DIGITAL COSENTIALS" width="600"/>
+</div>
+
 # LDH Programming Essentials
 
 Ein JetBrains / CLion Plugin für C & C++ Entwickler.
